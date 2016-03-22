@@ -10,7 +10,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'nathanaelkane/vim-indent-guides'
+"Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'heavenshell/vim-jsdoc'
+Bundle 'Yggdroot/indentLine'
 Bundle 'JulesWang/css.vim'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'cakebaker/scss-syntax.vim'
@@ -33,11 +35,27 @@ Bundle 'rizzatti/dash.vim'
 Bundle 'claco/jasmine.vim'
 Bundle 'jiangmiao/auto-pairs'
 Bundle "othree/javascript-libraries-syntax.vim"
-Bundle 'kien/ctrlp.vim'
+"Bundle 'kien/ctrlp.vim'
+Bundle 'Yggdroot/LeaderF'
 Bundle 'ervandew/supertab'
 
 " IMPORTANT: this improves performance by 200%
 set lazyredraw
+
+" IndentLine config
+let g:indentLine_char = '.' "'❘'
+let g:indentLine_leadingSpaceChar = '.'
+let g:indentLine_leadingSpaceEnabled = 0
+let g:indentLine_color_term = 236 
+let g:indentLine_indentLevel = 20
+
+" JsDoc config
+let g:jsdoc_allow_input_prompt = 1
+let g:jsdoc_input_description = 1
+let g:jsdoc_additional_descriptions = 1
+						
+"let g:indentLine_leadingSpaceEnabled=1
+"'•'
 
 let g:SuperTabMappingForward = '<S-tab>'
 
@@ -46,6 +64,9 @@ set tags=./tags;/
 let g:syntastic_javascript_checkers = ['jshint']
 
 filetype plugin indent on     " required!
+
+"Set Visual Selection
+"hi Visual guifg=#ffffff guibg=#999999 gui=none
 
 
 set autoread
@@ -79,9 +100,11 @@ set mouse=a  " on OSX press ALT and click
 set bs=2     " make backspace behave like normal again
 
 " file indent
-autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab autoindent
+autocmd Filetype html setlocal ts=4 sts=4 sw=4 expandtab autoindent
+autocmd Filetype css setlocal ts=4 sts=4 sw=4 expandtab autoindent
+autocmd Filetype scss setlocal ts=4 sts=4 sw=4 expandtab autoindent
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab autoindent
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 expandtab autoindent
 autocmd Filetype python setlocal ts=4 sts=4 sw=4 expandtab 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
@@ -101,6 +124,8 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
+map <c-f> :Leaderf<cr>
+
 " map 'save'
 "noremap <silent> <C-S>          :update<CR>
 
@@ -117,19 +142,19 @@ set nospell
 "set default font
 set guifont=Inconsolata\ 13
 
-" Color scheme
-set t_Co=256
-colorscheme molokai 
-let g:rehash256 = 1
-highlight Pmenu guibg=SlateGray guifg=White 
+"let g:rehash256 = 1
+"highlight Pmenu guibg=SlateGray guifg=White 
 
 
 " indent guides
 " indent guides
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_color_change_percent = 100
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
+"let g:indent_guides_enable_on_vim_startup = 1
+"let g:indent_guides_color_change_percent = 100
+"let g:indent_guides_start_level = 2
+"let g:indent_guides_guide_size = 1
+"let g:indent_guides_auto_colors = 0
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=grey ctermbg=grey
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
 " Enable syntax highlighting
 " You need to reload this file for the change to apply
@@ -249,3 +274,9 @@ let ruby_space_errors = 1
 autocmd FileType ruby compiler ruby
 
 set scrolloff=15
+
+" Color scheme
+set t_Co=256
+colorscheme	monokain 
+hi CursorLine cterm=underline ctermbg=none
+highlight LineNr ctermfg=237
