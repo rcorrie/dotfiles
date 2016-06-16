@@ -35,8 +35,6 @@ Bundle 'rizzatti/dash.vim'
 Bundle 'claco/jasmine.vim'
 Bundle 'jiangmiao/auto-pairs'
 Bundle "othree/javascript-libraries-syntax.vim"
-"Bundle 'kien/ctrlp.vim'
-Bundle 'Yggdroot/LeaderF'
 Bundle 'ervandew/supertab'
 
 " IMPORTANT: this improves performance by 200%
