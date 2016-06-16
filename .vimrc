@@ -10,7 +10,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-"Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'heavenshell/vim-jsdoc'
 Bundle 'Yggdroot/indentLine'
 Bundle 'JulesWang/css.vim'
