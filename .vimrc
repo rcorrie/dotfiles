@@ -36,6 +36,11 @@ Bundle 'jiangmiao/auto-pairs'
 Bundle "othree/javascript-libraries-syntax.vim"
 Bundle 'ervandew/supertab'
 
+Bundle 'Quramy/tsuquyomi'
+Bundle 'leafgarland/typescript-vim'
+Bundle 'jason0x43/vim-js-indent'
+
+
 " IMPORTANT: this improves performance by 200%
 set lazyredraw
 
@@ -110,6 +115,8 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
+
+autocmd BufRead,BufNewFile *.esql set filetype=sql
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
@@ -262,6 +269,8 @@ function! VisualSelection(direction) range
 	let @" = l:saved_reg
 endfunction
 
+
+set colorcolumn=80
 
 
 "----------------------Ruby---------------------
