@@ -47,6 +47,9 @@ set background=dark
 syntax on
 colorscheme jellyx 
 
+" set ruler (for col and row num)
+set ruler
+
 " indent guide setup
 hi IndentGuidesOdd  ctermbg=234
 hi IndentGuidesEven  ctermbg=235
@@ -72,6 +75,8 @@ map <c-G> :Gblame<CR>
 " commenter setup
 let g:NERDSpaceDelims = 1
 
+map <Leader>a :EasyAlign 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NVIM CONFIG 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -81,6 +86,8 @@ set lazyredraw
 
 " set tab indent spacing
 autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 expandtab autoindent
+autocmd Filetype sh setlocal ts=4 sts=4 sw=4 expandtab autoindent
+set ts=4 sts=4 sw=4 expandtab autoindent
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
