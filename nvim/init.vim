@@ -35,6 +35,8 @@ Plug 'nathanaelkane/vim-indent-guides'
 " commenter tool
 Plug 'scrooloose/nerdcommenter'
 
+Plug 'Valloric/YouCompleteMe'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -129,3 +131,6 @@ let mapleader="\<Space>"
 
 " will keep a buffer of 15 lines from top/bottom while scrolling
 set scrolloff=15
+
+let g:python2_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
