@@ -16,7 +16,7 @@ ln -s ~/dotfiles/.tmux-conf ~/.tmux-conf
 # Install nvm - https://github.com/creationix/nvm#installation
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 
-# Install neovim (nvim) - https://github.com/neovim/neovim/wiki/Installing-Neovim
+# Install neovim (nvim) - https://sergeykalistratov.com/neovim-with-python-on-macos/
 brew install neovim
 echo '# nvim path' >> ~/.zshrc
 echo 'export PATH="/usr/local/opt/gettext/bin:$PATH"' >> ~/.zshrc
