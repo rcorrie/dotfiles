@@ -37,6 +37,10 @@ Plug 'scrooloose/nerdcommenter'
 
 Plug 'Valloric/YouCompleteMe'
 
+Plug 'vim-airline/vim-airline'
+
+Plug 'leafgarland/typescript-vim'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -88,6 +92,7 @@ set lazyredraw
 
 " set tab indent spacing
 autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 expandtab autoindent
+autocmd Filetype typescript setlocal ts=2 sts=2 sw=2 expandtab autoindent
 autocmd Filetype sh setlocal ts=4 sts=4 sw=4 expandtab autoindent
 set ts=4 sts=4 sw=4 expandtab autoindent
 set ai "Auto indent
@@ -132,5 +137,15 @@ let mapleader="\<Space>"
 " will keep a buffer of 15 lines from top/bottom while scrolling
 set scrolloff=15
 
-let g:python2_host_prog = '/usr/local/bin/python'
-let g:python3_host_prog = '/usr/local/bin/python3'
+let g:ale_fix_on_save = 1
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'typescript': ['tslint'],
+\   'jsx': ['eslint']
+\}
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\   'jsx': ['eslint']
+\}
+let g:airline#extensions#ale#enabled = 1
+let g:ale_sign_column_always = 1

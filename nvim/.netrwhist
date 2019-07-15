@@ -1,6 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/rcorrie/workspace/idt/liveninjaMessengerMobile/node_modules/react-native-navigation'
-let g:netrw_dirhist_2='/Users/rcorrie/workspace/idt/liveninjaMessengerMobile/app/scripts/components/parties-list-row'
-let g:netrw_dirhist_3='/Users/rcorrie/workspace/idt/liveninjaMessengerMobile/app/scripts/components/placeholder-party-list'
-let g:netrw_dirhist_4='/Users/rcorrie/workspace/idt/liveninjaMessengerMobile/android/app/src/main/res/mipmap-hdpi'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/rcorrie/workspace/idt/liveninjaMessengerMobile/app/scripts/scenes/settings-confirm-device-ani'
+let g:netrw_dirhist_2='/Users/rcorrie/workspace/idt/liveninjaMessengerMobile/app/scripts/modules/helpers'
+let g:netrw_dirhist_3='/Users/rcorrie/workspace/idt/liveninjaMessengerMobile/node_modules/react-native/third-party/glog-0.3.5/packages'
+let g:netrw_dirhist_4='/Users/rcorrie/workspace/idt/liveninjaMessengerMobile/app/scripts/actions'
+let g:netrw_dirhist_5='/Users/rcorrie/workspace/idt/liveninjaMessengerMobile/app/scripts/headless-modules'
+let g:netrw_dirhist_6='/Users/rcorrie/workspace/idt/react-native-unite-call/src/android'
+let g:netrw_dirhist_7='/Users/rcorrie/workspace/idt/liveninjaMessengerMobile/scripts'
+let g:netrw_dirhist_8='/Users/rcorrie/workspace/idt/liveninjaMessengerMobile/e2e/suites/inbox'
